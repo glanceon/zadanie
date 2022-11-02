@@ -1,0 +1,32 @@
+Databaza (zadanie neobsahuje skript na vytvorenie databazy) obsahuje 3 tabulky:
+
+|------------------------------|
+| user                         |
+|------------------------------|
+| id int pk not null           |
+| name varchar(255) not null   |
+| dtm_birth timestamp not null |
+|------------------------------|
+
+
+|------------------------------|
+| product                      |
+|------------------------------|
+| id int pk not null           |
+| name varchar(255) not null   |
+| price decimal(10,2) not null |
+|------------------------------|
+
+
+|------------------------------|
+| user_product                 |
+|------------------------------|
+| id int pk not null           |
+| id_user int fk not null      |
+| id_product int fk not null   |
+| dtm timestamp not null       |
+|------------------------------|
+
+
+1. Napiste SQL prikaz, ktory vrati zakaznikov, ktori nekupili produkt s nazvom 'IPhone 6'.
+2. Napiste SQL prikaz, ktory vrati zakaznikov starsich ako 50 rokov, ktori nakupili dokopy aspon za 1000.

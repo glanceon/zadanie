@@ -1,0 +1,14 @@
+1.
+SELECT u.name
+FROM user u
+INNER JOIN user_product up ON u.id = up.id_user
+INNER JOIN product p ON up.id_product = p.id
+WHERE p.name != 'IPhone 6'
+
+2
+SELECT u.name, SUM(COUNT(up.id)*p.price) AS spent_total
+FROM user u
+INNER JOIN user_product up ON u.id = up.id_user
+INNER JOIN product p ON up.id_product = p.id
+HAVING spent_total >= 1000 and DATEDIFF(YEAR, u.dtm_birth, GetDate()) > 50 
+GROUP BY u.name

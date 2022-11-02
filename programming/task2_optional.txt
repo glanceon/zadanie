@@ -1,0 +1,28 @@
+
+Create simple local API server with 2 endpoints:
+
+1.
+/api/echo (POST)
+- accepts request 
+- parse incoming JSON body
+- print accepted data to console
+- return response with following contents:
+						{
+						    "characters" : 134,  	      			# number of characters in request body
+						    "ip_address" : "185.264.852.64"  			# ip address of request sender
+						    "msg_hash"   : "a8f5f167f44f4964e6c998dee827110c" # hash of request body content
+						}
+
+2.
+/api/status (GET)
+- accepts request
+- return response with following contents:
+						{
+						    "timestmp" : "2022-04-01 05:06:59",  # current datetime
+						    "rng"      : -48			  # random integer from interval <-100, 68>
+						}
+						
+
+Use any suitable framework or library of your choice. 
+Every request must be authorized/authenticated by API token in request header.
+For authentication use token with name "VerySecure" and value "85136c79cbf9fe36bb9d05d0639c70c265c18d37".

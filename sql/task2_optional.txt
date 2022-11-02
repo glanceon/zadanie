@@ -1,0 +1,10 @@
+Tabulka data v databaze (podla skriptu task1_db.sql) obsahuje texty stranok v HTML a tie mozu obsahovat URL obrazkov (napr. data/files/predaj.jpg). Treba ziskat zoznam tychto URL. Mozete pouzit aj PHP/Python/Java. 
+
+Struktura:
+
+ ----------------------------------------------
+| data                                         |
+|----------------------------------------------|
+| id   int primary key not null auto increment |
+| html text not null                           |
+ ----------------------------------------------
